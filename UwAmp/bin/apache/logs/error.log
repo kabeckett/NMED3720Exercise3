@@ -1,0 +1,15 @@
+[Tue Mar 05 07:48:10.706038 2019] [ssl:warn] [pid 87412:tid 688] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Mar 05 07:48:10.709028 2019] [ssl:warn] [pid 87412:tid 688] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Mar 05 07:48:11.078263 2019] [ssl:warn] [pid 87412:tid 688] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Tue Mar 05 07:48:11.078263 2019] [ssl:warn] [pid 87412:tid 688] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Mar 05 07:48:11.079247 2019] [ssl:warn] [pid 87412:tid 688] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Mar 05 07:48:11.423390 2019] [mpm_winnt:notice] [pid 87412:tid 688] AH00455: Apache/2.4.18 (Win32) OpenSSL/1.0.2f PHP/5.6.18 configured -- resuming normal operations
+[Tue Mar 05 07:48:11.423390 2019] [mpm_winnt:notice] [pid 87412:tid 688] AH00456: Server built: Jan 28 2016 09:58:25
+[Tue Mar 05 07:48:11.423390 2019] [core:notice] [pid 87412:tid 688] AH00094: Command line: 'F:\\SPRING2019\\NMED3720\\ex3_v2\\NMED3720Exercise3\\UwAmp\\bin\\apache\\bin\\httpd.exe -d F:/SPRING2019/NMED3720/ex3_v2/NMED3720Exercise3/UwAmp/bin/apache -f F:\\SPRING2019\\NMED3720\\ex3_v2\\NMED3720Exercise3\\UwAmp\\bin\\apache\\conf\\httpd.conf'
+[Tue Mar 05 07:48:11.437306 2019] [mpm_winnt:notice] [pid 87412:tid 688] AH00418: Parent: Created child process 76352
+[Tue Mar 05 07:48:13.052340 2019] [ssl:warn] [pid 76352:tid 640] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Mar 05 07:48:13.053338 2019] [ssl:warn] [pid 76352:tid 640] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Mar 05 07:48:13.300676 2019] [ssl:warn] [pid 76352:tid 640] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Tue Mar 05 07:48:13.300676 2019] [ssl:warn] [pid 76352:tid 640] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Mar 05 07:48:13.300676 2019] [ssl:warn] [pid 76352:tid 640] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Mar 05 07:48:13.344126 2019] [mpm_winnt:notice] [pid 76352:tid 640] AH00354: Child: Starting 64 worker threads.
