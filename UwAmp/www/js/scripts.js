@@ -13,21 +13,18 @@ var icosahedron;
 var render;
 var rotation;
 
-window.onload = init;
+// window.onload = init;
 
-function init() {
-
-	//***************SCENE*****************//
+function initScene() {
 	scene = new THREE.Scene();
 	camera = new THREE.PerspectiveCamera( 30, window.innerWidth/window.innerHeight, 0.1, 1000 );
 	renderer = new THREE.WebGLRenderer({alpha: true});
 	renderer.setSize( window.innerWidth, window.innerHeight );
 	document.body.appendChild( renderer.domElement );
 	camera.position.z = 100;
-	//*************************************//
+};
 
-
-	//*************LIGHTING***************//
+function initLighting() {
 	light1 = new THREE.PointLight( 0xFFFFFF );
 	light1.position.set( -20, 15, 25 );
 
@@ -37,11 +34,10 @@ function init() {
 	// add the light to the scene
 	scene.add( light1 );
 	scene.add( light2 );
-	//************************************//
+};
 
-
-	//*************SHAPES*****************//
-	// make geometry
+function initShapes() {
+// make geometry
 	cubeGeometry = new THREE.BoxGeometry ( 20, 20, 20 );
 	icoGeometry = new THREE.IcosahedronGeometry( 20, 0 );
 
@@ -72,27 +68,24 @@ function init() {
 
 	//tweenIcosohedron();
 
-	//icosahedron.rotation.x = 0.5;
-	//icosahedron.rotation.y = 0.1;
+	icosahedron.rotation.x = 0.5;
+	icosahedron.rotation.y = 0.1;
 
 	icosahedron.position.x = 25;
-	//*****************************************//
+};
 
-
-	//**************RENDERER*******************//
-	render();
-
-	function render() {
-		requestAnimationFrame( render );
-		renderer.render( scene, camera );
-	};
-	//*****************************************//
-
-
-
+function render() {
+	requestAnimationFrame( render );
+	renderer.render( scene, camera );
 };
 
 function tweenIcosohedron() {
 	rotation = {x: Math.random()*3, y: Math.random()*3, z: Math.random()*3};
 	TweenLite.to(icosahedron.rotation, 1, {x: icosahedron.rotation.x, y: icosahedron.rotation.y, z: icosahedron.rotation.z, ease: Back.easeInOut, onComplete: tweenIcosohedron});
 };
+
+
+initScene();
+initLighting();
+initShapes();
+render();
