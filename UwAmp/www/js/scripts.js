@@ -13,7 +13,6 @@ var textureLoader;
 var cube;
 var icosahedron;
 var render;
-var rotation;
 
 // Initialize the scene, camera, renderer
 function initScene() {
@@ -51,7 +50,7 @@ function initShapes() {
 	// texture loader for image material
 	textureLoader = new THREE.TextureLoader();
 	textureLoader.crossOrigin = true;
-	textureLoader.load('tiles.jpg', function(texture) {
+	textureLoader.load('https://upload.wikimedia.org/wikipedia/commons/c/c7/A_black_cat_named_Tilly.jpg', function(texture) {
 		texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
 		texture.repeat.set( 2, 2 );
 		imgMaterial = new THREE.MeshLambertMaterial( {map: texture} );
@@ -85,16 +84,20 @@ function initShapes() {
 // render the scene
 function render() {
 	requestAnimationFrame( render );
+
+	icosahedron.rotation.x += 0.01;
+	icosahedron.rotation.y += 0.01;
+
 	renderer.render( scene, camera );
 };
 
 // animate icosahedron rotation
-function tweenIcosohedron() {
-	rotation = {x: Math.random()*3, y: Math.random()*3, z: Math.random()*3};
-	TweenLite.to(icosahedron.rotation, 1, {x: icosahedron.rotation.x, y: icosahedron.rotation.y, z: icosahedron.rotation.z, ease: Back.easeInOut, onComplete: tweenIcosohedron});
-};
+// function tweenIcosohedron() {
+// 	var rotation = {x: Math.random()*3, y: Math.random()*3, z: Math.random()*3};
+// 	TweenLite.to(mesh.rotation, 1, {x: rotation.x, y: rotation.y, z: rotation.z, ease: Back.easeInOut, onComplete: tweenIcosohedron});
+// };
 
-
+// call all the functions
 initScene();
 initLighting();
 initShapes();
